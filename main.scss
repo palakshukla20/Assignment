@@ -1,0 +1,202 @@
+@use 'index.scss' as i;
+$myFont: sans-serif;
+$myColor: white;
+$myFontSize: 18px;
+$myWidth: 680px;
+$position: relative;
+$margin: 0;
+
+.container {
+  margin-left:auto; 
+  margin-right: auto; 
+  max-width: 1147px;
+}
+body {   
+  font-family: $myFont;
+  margin: $margin;
+  position: $position;
+}  
+.header {
+  box-shadow: 0 4px 8px 0 rgb(181 161 161), 0 6px 20px 0 rgb(247 239 239);
+  height: 255px;
+}
+.head-up {
+  background-color: black;
+  color:#c7c1c1;
+  font-size: $myFontSize;
+  padding: 0px;
+  height: 40px;
+  overflow: auto;
+} 
+.head-up-black {  
+  padding-top: 12px;
+  span {
+    color: $myColor;
+    padding-right: 60px;
+  }
+}
+.head-up-black-icon {
+  color:rgb(231, 216, 216);
+  float: right;
+  font-size:15px; 
+  i {
+    margin-left: 20px;
+  }
+}
+.head-logo {
+  height: 113px;
+  a{
+    padding-top: 10px;
+  }
+}
+.head-nav {
+  margin: 23px -23px 23px 0px;
+  ul {
+    background-color:white;
+    list-style-type: none;
+    margin: $margin;
+    overflow: hidden;
+    padding: 0;
+  }
+  li {
+    float: left;
+    font-size: 15px;
+    padding-right: 15px;
+    &a {
+      color: black;
+      display: block;
+      padding: 14px 16px; 
+      text-align: center;
+      text-decoration: none;
+      &:hover {
+        background-color: rgba(202, 192, 192, 0.2);
+      }
+    }
+  }
+}
+section {
+  margin-top:40px;
+  }
+  @mixin button { 
+    border: none; 
+    font-weight: normal;
+    height: 35px;
+    outline: none;
+    width: 95px;
+    text-align: center;
+  }
+.treading-now {
+  background-color: red;
+  border-radius: 6px;
+  color: $myColor;
+  height: 40px; 
+  margin-top: 25px;
+  outline: none;
+  padding: 10px 25px;
+  width: 150px; 
+  text-align: center;
+  @include i.font_style;
+  text-decoration: i.$text-decoration;
+  &:hover {
+    box-shadow: 0 4px 2px 0;
+  }
+}
+.treading-part {
+  display: inline-flex;
+  margin-top: 45px;
+}
+.post {
+  position: relative;
+  img {
+    border:none;
+    border-radius: 1%;
+    color: $myColor;
+    font-size: 29px;
+    font-weight: bold;
+    height: 440px;
+    line-height: 45px;
+    padding-left: 0;
+    top: 45%;
+    width: 95%;
+  }
+  button {
+    @include button;
+    background-color: white; 
+    color: black; 
+    position: absolute;
+  }
+}
+.side-img {
+  display: inline-flex;
+  padding-top: 0;
+  padding-bottom: 15px;
+  img {
+    border-radius: 5%;
+    width: 150px;
+    height: 100px;
+  }
+  div {
+    padding-left: 25px;
+  }
+}
+$btn-color: ("button1":#f7dbe0, "button2" : #cff1e9, "button3" : #f0ffd3, "button4" : #fff9b8, "button5" : #f7dbe0);
+@each $name, $color in $btn-color {
+  .side-img-#{$name} {
+    @include button;
+    background: $color;
+  }
+  .post-down-card-#{$name} {
+    @include button;
+    background: $color;
+  }
+}
+.trending-part-right-down {
+  display: flex;
+  margin-top: 23px;
+  img {
+    border-radius: 10%;
+    width: 217px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+  > div {
+    margin-right: -19px;
+  }
+  p{
+    font-size: $myFontSize;
+    line-height: 25px;
+    width: 220px;
+  }
+} 
+.weekly-post-container {
+  display: flex;
+}
+.weekly-post {
+  position:relative;
+  margin: 22px 9px;
+  width: 35%;
+  img{
+  border-radius: 2%;
+  height: 420px;
+  width: 367px;
+  }
+}
+.weekly-post-box {
+  background-color: #ffffff;
+  border-radius: 3%;
+  height: 145px;
+  left: 8%;
+  padding-left: 10px;
+  position: absolute;
+  width: 303px;
+  top: 61%;
+  & button {  
+    background-color: rgb(253 232 243);
+    border:none; 
+    margin-top:25px; 
+    height: 30px; 
+    width: 100px; 
+    text-align: center; 
+  }
+}
+

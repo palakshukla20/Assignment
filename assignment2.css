@@ -44,7 +44,7 @@ margin-top:40px;
 .treading-now:hover  {
   box-shadow: 0 4px 2px 0;
 }
-.treading-now{
+.treading-now {
   background-color: red;
   border-radius: 6px;
   padding: 10px 25px;
@@ -110,10 +110,10 @@ hr.divider{
 .post-down-card {
   margin-right: -19px;
 }
-.post-down-card button{
-  border:none; 
+.post-down-card button {
+  border: none; 
   height: 35px;
-  margin-top:25px; 
+  margin-top: 25px; 
   text-align: center; 
   width: 95px;
 }

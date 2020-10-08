@@ -63,7 +63,7 @@ function showCalendar(month, year) {
   var date = 1;
   var tbl = document.getElementById("calendar-body"); 
   tbl.innerHTML = "";
-  monthAndYear.innerHTML = months[month] + " " + year;
+  monthAndYear.innerHTML =  months[month] + " " + year;
   selectYear.value = year;
   selectMonth.value = month;
   for (var i = 0; i < 6; i++) {
@@ -80,10 +80,11 @@ function showCalendar(month, year) {
           disNext +=1;
       } else {
           colText = document.createTextNode(date);
+          col.style.fontWeight = "Semi-bold,";
           if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
             col.classList.add("bg-info");
           } else if (j==0) {
-            col.classList.add("bg-danger");
+            col.style.color = "red";
           } 
           date++;
       }
